@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = 'https://furniture-coursework.onrender.com//api';
+const API_URL = 'https://furniture-coursework.onrender.com/api';
 const api = axios.create({
     baseURL: API_URL,
 });
@@ -65,7 +65,7 @@ import io from 'socket.io-client';
 
 // Подключение к Socket.IO серверу
 const connectSocket = (userId) => {
-    const socket = io('http://localhost:5000');
+    const socket = io('https://furniture-coursework.onrender.com');
     socket.on('connect', () => {
         console.log('Подключено к серверу чата');
     });
