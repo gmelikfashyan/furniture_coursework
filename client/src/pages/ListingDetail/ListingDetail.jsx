@@ -162,7 +162,7 @@ export default function ListingDetail() {
                     backgroundRepeat: 'no-repeat'
                 }}>
                     <model-viewer
-                        src={`https://furniture-coursework.onrender.com/${listing.model_url}`}
+                        src={`https://furniture-coursework.onrender.com${listing.model_url}`}
                         scale={`${modelScale} ${modelScale} ${modelScale}`}
                         ar
                         ar-modes="webxr scene-viewer quick-look"
@@ -228,7 +228,7 @@ export default function ListingDetail() {
     let currentImage = "";
     console.log(listing.images?.[currentImageIndex].image_url);
     if (listing.images?.[currentImageIndex].image_url) {
-        currentImage = `https://furniture-coursework.onrender.com/${listing.images?.[currentImageIndex].image_url}`;
+        currentImage = `https://furniture-coursework.onrender.com${listing.images?.[currentImageIndex].image_url}`;
     }
 
     

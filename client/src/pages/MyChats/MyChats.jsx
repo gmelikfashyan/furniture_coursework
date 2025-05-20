@@ -69,7 +69,7 @@ export default function ChatList() {
             >
               <div className={styles.imageContainer}>
                 <img 
-                  src={`http://localhost:5000${chat.listing_image}`} 
+                  src={`https://furniture-coursework.onrender.com${chat.listing_image}`} 
                   alt={chat.listing_title}
                   className={styles.listingImage}
                 />

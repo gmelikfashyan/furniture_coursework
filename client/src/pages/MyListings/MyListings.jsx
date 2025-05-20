@@ -98,7 +98,7 @@ export default function MyListings() {
                                 
                                     {listing.primary_image ? (
                                         <img
-                                        src={`http://localhost:5000${listing.primary_image}`}
+                                        src={`https://furniture-coursework.onrender.com${listing.primary_image}`}
                                             alt={listing.title}
                                             className={styles.listingImage}
                                             

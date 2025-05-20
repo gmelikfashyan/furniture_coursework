@@ -245,7 +245,7 @@ export default function Home() {
                                 <div className={styles.imageContainer}>
                                     {listing.primary_image ? (
                                         <img
-                                            src={`https://furniture-coursework.onrender.com/${listing.primary_image}`}
+                                            src={`https://furniture-coursework.onrender.com${listing.primary_image}`}
                                             alt={listing.title}
                                             className={styles.listingImage}
                                             
