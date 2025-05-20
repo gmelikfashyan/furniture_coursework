@@ -14,7 +14,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
     cors: {
-        origin: ["http://localhost:5173", "http://localhost:3000"],
+        origin: ["http://localhost:5173", "http://localhost:3000", ],
         methods: ["GET", "POST"],
       }
 });
@@ -55,7 +55,7 @@ const isAdmin = (req, res, next) => {
 
 // Конфигурация подключения к базе данных
 const pool = new Pool({
-    connectionString: 'postgresql://postgres:Gevork2611@localhost:5432/testdb?client_encoding=utf8',
+    connectionString: process.env.DATABASE_URL || 'postgresql://postgres:Gevork2611@localhost:5432/testdb?client_encoding=utf8',
   });
 
 // Создание директории для загрузки файлов, если она не существует
