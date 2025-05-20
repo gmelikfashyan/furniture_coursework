@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://furniture-coursework.onrender.com/api';
 const api = axios.create({
     baseURL: API_URL,
 });
@@ -23,7 +23,7 @@ const getListing = async (id) => {
         throw error;
     }
 };
-// Создание нового объявления с загрузкой изображений
+
 const createListing = async (listingData, images, modelFile) => {
     try {
         let storedUser = JSON.parse(localStorage.getItem('user'));

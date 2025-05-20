@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://furniture-coursework.onrender.com/api';
 const api = axios.create({
     baseURL: API_URL,
 });
@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
-    // Проверяем, авторизован ли пользователь при загрузке
+
     useEffect(() => {
         const checkLoggedIn = async () => {
             let storedUser = localStorage.getItem('user');
