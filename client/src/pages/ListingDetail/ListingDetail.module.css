@@ -1,0 +1,280 @@
+.listingContainer {
+    display: flex;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    align-items: flex-start;
+}
+
+.leftWrapper {
+    flex: 2;
+    text-align: left;
+}
+
+.rightWrapper {
+    flex: 1;
+    position: sticky;
+    top: 1rem;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.imgWrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 540px;
+}
+
+.imgWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.buttonDiv {
+    display: flex;
+    gap: 10px;
+}
+
+.imgButtonWrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.leftButton {
+    left: 10px;
+}
+
+.rightButton {
+    right: 10px;
+}
+
+.imgButton {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftButton {
+    left: 1rem;
+}
+
+.rightButton {
+    right: 1rem;
+}
+
+.imgButton {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.imgButton:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.imageCounter {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.detailsSection {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.feature {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    line-height: 1.6;
+    color: #555;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.buttonWrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.deleteButton {
+    background-color: #ff4444;
+    color: white;
+    flex-grow: 1;
+}
+
+.deleteButton:hover {
+    background-color: #cc0000;
+}
+
+.chatButton {
+    background-color: #4285f4;
+    color: white;
+    flex-grow: 1;
+}
+
+.chatButton:hover {
+    background-color: #3367d6;
+}
+
+.ARButton {
+    background-color: #42f442;
+    color: white;
+    flex-grow: 1;
+}
+
+.ARButton:hover {
+    background-color: #51d633;
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+.error {
+    color: #ff4444;
+}
+
+@media (max-width: 768px) {
+    .listingContainer {
+        flex-direction: column;
+    }
+    
+    .rightWrapper {
+        position: static;
+    }
+    
+    .mainImage {
+        height: 300px;
+    }
+}
+.author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.model-viewer-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70vh;
+    min-height: 500px;
+    max-height: 800px;
+    overflow: hidden;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 20;
+    padding: 8px 16px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .model-viewer-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5; /* Фон по умолчанию */
+  }
+  
+  .custom-model-viewer {
+    width: 100%;
+    height: 100%;
+    --poster-color: transparent;
+    --progress-bar-color: rgba(0,0,0,0.5);
+    background-color: transparent;
+  }
+  
+  .ar-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .background-upload-input {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: rgba(255,255,255,0.8);
+    padding: 8px;
+    border-radius: 4px;
+    width: auto;
+    max-width: 80%;
+  }

@@ -1,0 +1,158 @@
+.chatContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .loading, 
+  .empty,
+  .error {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+  }
+  
+  .error {
+    color: #e74c3c;
+  }
+  
+  .empty {
+    color: #7f8c8d;
+  }
+  
+  .chatList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .chatItem {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .chatItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    margin-right: 15px;
+  }
+  
+  .listingImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .unreadBadge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .chatContent {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .chatHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .listingTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+  }
+  
+  .listingPrice {
+    font-size: 16px;
+    font-weight: 700;
+    color: #27ae60;
+  }
+  
+  .chatInfo {
+    color: #7f8c8d;
+  }
+  
+  .otherUser {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    color: #3498db;
+  }
+  
+  .lastMessage {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    color: #34495e;
+  }
+  
+  .messageTime {
+    font-size: 12px;
+    color: #95a5a6;
+    display: flex;
+    align-items: center;
+  }
+  
+  .timeSeparator {
+    margin: 0 5px;
+  }
+  
+  @media (max-width: 600px) {
+    .chatContainer {
+      padding: 10px;
+    }
+    
+    .chatItem {
+      padding: 10px;
+    }
+    
+    .imageContainer {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .listingTitle {
+      font-size: 14px;
+    }
+    
+    .listingPrice {
+      font-size: 14px;
+    }
+  }
