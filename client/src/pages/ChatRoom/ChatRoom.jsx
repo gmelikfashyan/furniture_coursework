@@ -21,7 +21,7 @@ export default function ChatRoom() {
     fetchMessages();
 
     // Настройка WebSocket соединения
-    socketRef.current = io('http://localhost:5000', {
+    socketRef.current = io('https://furniture-coursework.onrender.com/', {
       auth: {
         token: currentUser.token
       }
