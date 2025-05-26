@@ -14,7 +14,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
     cors: {
-        origin: ["http://localhost:5173", "http://localhost:3000", ],
+        origin: ["http://localhost:5173", "http://localhost:3000", "https://furniture-coursework-ro48.vercel.app" ],
         methods: ["GET", "POST"],
       }
 });
