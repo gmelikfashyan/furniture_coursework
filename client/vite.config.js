@@ -11,7 +11,7 @@ export default defineConfig({
     port: 5173,       
   },
 
-  assetsInclude: ['**/*.glb', '**/*.gltf'], // Включаем 3D-модели как ассеты
+  assetsInclude: ['**/*.glb', '**/*.gltf'],
   build: {
     rollupOptions: {
       output: {

@@ -100,7 +100,6 @@ export default function ListingDetail() {
     const handleCreateChat = async () => {
         try {
             await createChat(id);
-            // Перенаправление в чат или другое действие
         } catch (error) {
             console.error("Ошибка при создании чата:", error);
         }
@@ -157,7 +156,7 @@ export default function ListingDetail() {
                     height: containerDimensions.height,
                     backgroundColor: backgroundImage ? 'transparent' : 'white',
                     backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none',
-                    backgroundSize: 'contain', // 'contain' вместо 'cover', чтобы не обрезать изображение
+                    backgroundSize: 'contain', 
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat'
                 }}>
@@ -226,9 +225,17 @@ export default function ListingDetail() {
         return <div className={styles.error}>Объявление не найдено</div>;
     }
     let currentImage = "";
-    console.log(listing.images?.[currentImageIndex].image_url);
-    if (listing.images?.[currentImageIndex].image_url) {
-        currentImage = `https://furniture-coursework.onrender.com${listing.images?.[currentImageIndex].image_url}`;
+
+    try {
+        if (Array.isArray(listing.images) && 
+            listing.images.length > currentImageIndex && 
+            listing.images[currentImageIndex]?.image_url) {
+            
+            currentImage = `https://furniture-coursework.onrender.com${listing.images[currentImageIndex].image_url}`;
+        }
+    } catch (error) {
+        console.error("Error processing image URL:", error);
+        currentImage = ""; // or set a default fallback image
     }
 
     
